@@ -7,7 +7,6 @@ import java.util.stream.Collectors;
 //  MODELO: Produto
 // ===================================================
 class Produto {
-
     private static final AtomicInteger contadorId = new AtomicInteger(1);
 
     private int id;
