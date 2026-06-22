@@ -117,8 +117,12 @@ class EstoqueService {
 
     public boolean editarProduto(int id, String nome, String categoria,
                                   int quantidade, int minimo, double preco, String unidade) {
-        Produto p = buscarPorId(id);
-        if (p == null) { System.out.println("  ✗ Produto não encontrado."); return false; }
+
+        Optional<Produto> opt = buscarPorId(id);
+        if (opt.isEmpty()) {
+            System.out.println(" produto não encontrado. ");
+            return false;
+            
         p.setNome(nome);
         p.setCategoria(categoria);
         p.setQuantidade(quantidade);
