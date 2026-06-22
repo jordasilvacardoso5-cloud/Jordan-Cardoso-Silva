@@ -149,9 +149,12 @@ class EstoqueService {
             System.out.println("  ✗ Quantidade deve ser maior que zero.");
             return;
         }
-        Produto p = buscarPorId(id);
-        if (p == null) { System.out.println("  ✗ Produto não encontrado."); return; }
-
+        Optional<Produto> opt = buscarPorID(id);
+        if (opt.isEmpty()) {
+            System.out.println(" Produto não encontrado.");
+            return;        
+        }
+        Produto p = opt.get();
         String tipoUpper = tipo.toUpperCase();
 
         if (tipoUpper.equals("ENTRADA")) {
