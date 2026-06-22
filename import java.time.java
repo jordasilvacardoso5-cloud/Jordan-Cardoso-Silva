@@ -383,8 +383,8 @@ class Menu {
 // ===================================================
 //  PONTO DE ENTRADA
 // ===================================================
-public class EstoqueMercadinho {
-    public static void main(String[] args) {
+private static class EstoqueMercadinho {
+    private static void main(String[] args) {
         new Menu().iniciar();
     }
 }
