@@ -122,7 +122,7 @@ class EstoqueService {
         if (opt.isEmpty()) {
             System.out.println(" produto não encontrado. ");
             return false;
-            
+        }    
         p.setNome(nome);
         p.setCategoria(categoria);
         p.setQuantidade(quantidade);
