@@ -135,11 +135,11 @@ class EstoqueService {
     }
 
     public boolean excluirProduto(int id) {
-        Produto p = buscarPorId(id);
-        if (p == null) { System.out.println("  ✗ Produto não encontrado."); return false; }
-        produtos.remove(p);
-        System.out.println("  ✓ Produto removido: " + p.getNome());
-        return true;
+
+        Optional<Produto> opt = buscarPorID(id);
+        if (opt.Empty()) {
+            System.out.println("produto não encontrado.");
+            return true;
     }
 
     // ---------- AJUSTE DE ESTOQUE ----------
@@ -388,8 +388,8 @@ class Menu {
 // ===================================================
 //  PONTO DE ENTRADA
 // ===================================================
-private static EstoqueMercadinho {
-    private static void main(String[] args) {
+
+    public static void main(String[] args) {
         new Menu().iniciar();
     }
-}
+
