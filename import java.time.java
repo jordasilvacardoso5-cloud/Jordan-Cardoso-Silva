@@ -123,6 +123,7 @@ class EstoqueService {
             System.out.println(" produto não encontrado. ");
             return false;
         }    
+        Produto p = opt.get();
         p.setNome(nome);
         p.setCategoria(categoria);
         p.setQuantidade(quantidade);
