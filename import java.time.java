@@ -229,8 +229,8 @@ class EstoqueService {
 
     // ---------- AUXILIARES ----------
 
-    public Produto buscarPorId(int id) {
-        return produtos.stream().filter(p -> p.getId() == id).findFirst().orElse(null);
+    public Optional<Produto> buscarPorId(int id) {
+        return produtos.stream().filter(p -> p.getId() == id).findFirst();
     }
 
     public List<Produto> getTodosProdutos() { return new ArrayList<>(produtos); }
