@@ -244,10 +244,12 @@ class EstoqueService {
 // ===================================================
 //  INTERFACE: Menu interativo no terminal
 // ===================================================
-class Menu {
+public class EstoqueMercadinho {
+
+ static class Menu {
 
     private final EstoqueService servico = new EstoqueService();
-    private final Scanner scanner        = new Scanner(System.in);
+    private final Scanner        scanner = new Scanner(System.in);
 
     public void iniciar() {
         carregarDadosIniciais();
@@ -307,6 +309,8 @@ class Menu {
     private void editarProduto() {
         System.out.println("\n── EDITAR PRODUTO ──");
         int id = lerInt("ID do produto: ");
+        Optional<Produto> opt = servico.buscarPorID(id);
+        if (out.isEmpty()) { System.out.println("Produto não encontrado."); return }; 
         Produto p = servico.buscarPorId(id);
         if (p == null) { System.out.println("  ✗ Produto não encontrado."); return; }
         System.out.println("  Produto atual: " + p);
