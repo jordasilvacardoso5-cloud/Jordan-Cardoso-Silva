@@ -141,7 +141,11 @@ class EstoqueService {
             System.out.println("produto não encontrado.");
             return true;
     }
-
+        Produto p = opt.get();
+        produtos.remove(p);
+        System.out.println(" Produto removido: " + p.getNome());
+        return true;
+    }
     // ---------- AJUSTE DE ESTOQUE ----------
 
     public void ajustarEstoque(int id, String tipo, int quantidade, String obs) {
