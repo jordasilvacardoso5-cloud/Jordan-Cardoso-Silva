@@ -135,7 +135,7 @@ class EstoqueService {
     }
 
     public boolean excluirProduto(int id) {
-
+        Produto p = buscarPorId(id);
         Optional<Produto> opt = buscarPorID(id);
         if (opt.Empty()) {
             System.out.println("produto não encontrado.");
