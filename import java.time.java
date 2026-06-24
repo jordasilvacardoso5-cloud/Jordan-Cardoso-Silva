@@ -147,7 +147,7 @@ class EstoqueService {
         return true;
     }
     // ---------- AJUSTE DE ESTOQUE ----------
-
+ 
     public void ajustarEstoque(int id, String tipo, int quantidade, String obs) {
         if (quantidade <= 0) {
             System.out.println("  ✗ Quantidade deve ser maior que zero.");
