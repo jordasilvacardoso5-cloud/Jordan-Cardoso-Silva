@@ -92,7 +92,6 @@ class Movimentacao {
                 obs.isEmpty() ? "-" : obs);
     }
 }
-
 // ===================================================
 //  SERVIÇO: EstoqueService  (lógica de negócio)
 // ===================================================
@@ -399,7 +398,6 @@ public class EstoqueMercadinho {
 // ===================================================
 //  PONTO DE ENTRADA
 // ===================================================
-
     public static void main(String[] args) {
         new Menu().iniciar();
     }
