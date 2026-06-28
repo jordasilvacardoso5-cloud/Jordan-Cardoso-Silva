@@ -65,7 +65,7 @@ class Produto {
 //  MODELO: Movimentacao
 // ===================================================
 class Movimentacao {
-    private static final AtomicInteger contadorId = new AtomicInteger(initialvalue:1);
+    private static final AtomicInteger contadorId = new AtomicInteger(initialValue:1);
 
     private int id;
     private String produto;
